@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Node File Galleryss</title>
+</head>
+<body>
+  <section id="home" class="video-hero js-fullheight" style="height: 200px; background-image: url(images/bg_1.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;">
+    <div class="container">
+      <div class="row js-fullheight justify-content-center d-flex align-items-center">
+        <div class="col-md-8">
+          <div class="text text-center mt-5">
+            <h1>File Gallery <%= valWord %></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ftco-section ftco-no-pt ftco-featured-model">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 col-lg-3">
+            <div class="model-entry">
+              <div class="model-img" style="background-image: url(images/image_1.jpg);">
+                <div class="name text-center">
+                  <h3><a href="model-single.html">Andrea</a></h3>
+                </div>
+                <div class="text text-center">
+                  <h3><a href="model-single.html">Andrea<br><span>Smith</span></a></h3>
+                  <div class="d-flex models-info">
+                    <div class="box">
+                      <p>Shoe</p>
+                      <span>40</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="model-entry">
+              <div class="model-img" style="background-image: url(images/image_2.jpg);">
+                <div class="name text-center">
+                  <h3><a href="model-single.html">Nicole</a></h3>
+                </div>
+                <div class="text text-center">
+                  <h3><a href="model-single.html">Nicole<br><span>Wall</span></a></h3>
+                  <div class="d-flex models-info">
+                    <div class="box">
+                      <p>Height</p>
+                      <span>185</span>
+                    </div>
+                    <div class="box">
+                      <p>Bust</p>
+                      <span>79</span>
+                    </div>
+                    <div class="box">
+                      <p>Waist</p>
+                      <span>40</span>
+                    </div>
+                    <div class="box">
+                      <p>Hips</p>
+                      <span>87</span>
+                    </div>
+                    <div class="box">
+                      <p>Shoe</p>
+                      <span>40</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="model-entry">
+              <div class="model-img" style="background-image: url(images/image_3.jpg);">
+                <div class="name text-center">
+                  <h3><a href="model-single.html">Cindy</a></h3>
+                </div>
+                <div class="text text-center">
+                  <h3><a href="model-single.html">Cindy<br><span>Smith</span></a></h3>
+                  <div class="d-flex models-info">
+                    <div class="box">
+                      <p>Height</p>
+                      <span>185</span>
+                    </div>
+                    <div class="box">
+                      <p>Bust</p>
+                      <span>79</span>
+                    </div>
+                    <div class="box">
+                      <p>Waist</p>
+                      <span>40</span>
+                    </div>
+                    <div class="box">
+                      <p>Hips</p>
+                      <span>87</span>
+                    </div>
+                    <div class="box">
+                      <p>Shoe</p>
+                      <span>40</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="model-entry">
+              <div class="model-img" style="background-image: url(images/image_4.jpg);">
+                <div class="name text-center">
+                  <h3><a href="model-single.html">Jannah</a></h3>
+                </div>
+                <div class="text text-center">
+                  <h3><a href="model-single.html">Jannah<br><span>Doe</span></a></h3>
+                  <div class="d-flex models-info">
+                    <div class="box">
+                      <p>Height</p>
+                      <span>185</span>
+                    </div>
+                    <div class="box">
+                      <p>Bust</p>
+                      <span>79</span>
+                    </div>
+                    <div class="box">
+                      <p>Waist</p>
+                      <span>40</span>
+                    </div>
+                    <div class="box">
+                      <p>Hips</p>
+                      <span>87</span>
+                    </div>
+                    <div class="box">
+                      <p>Shoe</p>
+                      <span>40</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <div class="container">
+    <%= typeof msg != 'undefined' ? msg : '' %>
+
+    <div>
+    โชว์รูป
+    
+    </div>
+    <div>
+        <table border="1">
+            <% console.log(data); %>
+            <% for(var i=0; i < data.length; i++) { %>
+               <tr>
+                 <td><img src="http://localhost:3001/<%=data[i] %>" height="120" /></td> 
+               </tr>
+            <% } %>
+          </table>
+    </div>
+  </div>
+  
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>  
+</body>
+</html>
